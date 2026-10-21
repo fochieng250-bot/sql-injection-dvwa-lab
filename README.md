@@ -135,6 +135,12 @@ Do not concatenate request values into SQL text. Validate the identifier's expec
 - Verify that a lookup returns only the authorized record and cannot return unrelated columns.
 - Re-test each relevant route and security configuration after remediation.
 
+### Retest result — DVWA Impossible security
+
+The source notes report that the same boolean-condition and `UNION`-style test cases were retried with DVWA set to **Impossible**, where the lookup uses prepared statements. Neither test returned records; the notes describe the inputs as blocked and the remediation as confirmed in that lab configuration.
+
+This is a configuration-specific retest result, not proof that every route or deployment is safe. The referenced `08-impossible-blocked.png` screenshot was not present among the supplied files and is therefore not included here.
+
 ## Safe verification checklist
 
 - [ ] Query values are bound through prepared statements.
